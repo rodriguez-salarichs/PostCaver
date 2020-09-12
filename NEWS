@@ -1,0 +1,10 @@
+version 1.0
+- The jobs will be run on a list of remote computers
+- It was added a timer
+version 0.901
+- It was added to the program the GNU parallel-20170622 libraries
+version 0.9
+- It was added to the program the MGL-1.5.6 libraries
+- The installation procedure was updated
+version 0.1
+The first completed version

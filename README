@@ -1,0 +1,71 @@
+    "This script calculates the binding free-energies for smallest and largest CAVER's tunnels"
+
+Installation procedure:
+
+#####################################
+   If you do not have pod2man:
+   sudo cpan
+   > install Pod::Man
+####################################
+
+  ./INSTALL -d dir
+          
+      -d <v> : Installation directory
+      -h : help message
+
+
+Running procedure:
+   
+   script_post_CAVER.sh -p CAVER_PDB_DIR -i CAVER_OUT_DIR -o OUTNAME -c CPU -a C:N:O -t bottleneck -S sshlogin
+          
+      -p   : "CAVER's md_snapshots DIRECTORY"
+      -i   : "CAVER's out DIRECTORY"
+      -o   : "Output name"
+      -c   : "Number of CPU (default: 1)"
+      -a   : "Atoms types (default: C:N:O)"
+      -t   : "curvature:length:bottleneck"
+      -S   : "Distribute jobs to remote computers. The jobs will be run on a list of remote computers. (Example: name@nodeXX)"
+
+    Atoms types:
+        H      # Non H-bonding Hydrogen
+        HD     # Donor 1 H-bond Hydrogen
+        HS     # Donor S Spherical Hydrogen
+        C      # Non H-bonding Aliphatic Carbon
+        A      # Non H-bonding Aromatic Carbon
+        N      # Non H-bonding Nitrogen
+        NA     # Acceptor 1 H-bond Nitrogen
+        NS     # Acceptor S Spherical Nitrogen
+        OA     # Acceptor 2 H-bonds Oxygen
+        OS     # Acceptor S Spherical Oxygen
+        F      # Non H-bonding Fluorine
+        Mg     # Non H-bonding Magnesium
+        MG     # Non H-bonding Magnesium
+        P      # Non H-bonding Phosphorus
+        SA     # Acceptor 2 H-bonds Sulphur
+        S      # Non H-bonding Sulphur
+        Cl     # Non H-bonding Chlorine
+        CL     # Non H-bonding Chlorine
+        Ca     # Non H-bonding Calcium
+        CA     # Non H-bonding Calcium
+        Mn     # Non H-bonding Manganese
+        MN     # Non H-bonding Manganese
+        Fe     # Non H-bonding Iron
+        FE     # Non H-bonding Iron
+        Zn     # Non H-bonding Zinc
+        ZN     # Non H-bonding Zinc
+        Br     # Non H-bonding Bromine
+        BR     # Non H-bonding Bromine
+        I      # Non H-bonding Iodine
+        Z      # Non H-bonding covalent map
+        G      # Ring closure Glue Aliphatic Carbon  # SF
+        GA     # Ring closure Glue Aromatic Carbon   # SF
+        J      # Ring closure Glue Aliphatic Carbon  # SF
+        Q      # Ring closure Glue Aliphatic Carbon  # SF
+
+    Option:
+ 
+      -h : help message
+
+    Version:
+
+      version : 1.0
